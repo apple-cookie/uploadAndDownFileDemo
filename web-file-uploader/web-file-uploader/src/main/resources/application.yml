@@ -1,0 +1,18 @@
+## MULTIPART (MultipartProperties)
+# Enable multipart uploads
+server:
+  port: 8089
+  uri-encoding: utf-8
+  session-timeout: 1800
+  tomcat:
+    max-threads: 1000
+    min-spare-threads: 30
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 2014MB
+file:
+   upload-dir: uploads
